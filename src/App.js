@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Heading, SimpleGrid } from "@chakra-ui/react"
+import {Container, Heading } from "@chakra-ui/react"
 import ListGifs from './components/ListGifs'
 import { Link,Route } from "wouter"
 
@@ -14,12 +14,9 @@ function App() {
       <Link to="/gif/css">Gifs de CSS</Link>
 
 
-
-      <SimpleGrid columns={4} spacing={2}>
-        <Route 
+      <Route 
           path="/gif/:keysearch"
           component={ListGifs} />
-      </SimpleGrid>
     </Container>
   );
 }
